@@ -12,13 +12,14 @@ let secretNumber;
 let score = 20;
 let highscore = 0;
 let guessed = 0; // to hold previous guess value
+let hint = 5
 
 function displayMessage(msg) {
   message.textContent = msg;
 }
 
 function randomNumber() {
-  secretNumber = Math.trunc(Math.random() * 40) + 1;
+  secretNumber = Math.trunc(Math.random() * 30) + 1; 
 }
 
 function btnDisable() {
@@ -58,16 +59,16 @@ btnCheck.addEventListener('click', () => {
     if (score > 1) {
       if (guess < 0 || guess > 40) {
         displayMessage('Input number between 1 - 30');
-      } else if (guessGreater && guessDifference <= 8) {
+      } else if (guessGreater && guessDifference <= hint) {
         displayMessage('📈 High');
         score--;
-      } else if (guessGreater && guessDifference > 8) {
+      } else if (guessGreater && guessDifference > hint) {
         displayMessage('📈 Too High!');
         score--;
-      } else if (!guessGreater && guessDifference2 > 8) {
+      } else if (!guessGreater && guessDifference2 > hint) {
         displayMessage('📉 Too Low!');
         score--;
-      } else if (!guessGreater && guessDifference2 <= 8) {
+      } else if (!guessGreater && guessDifference2 <= hint) {
         displayMessage('📉 Low');
         score--;
       }
