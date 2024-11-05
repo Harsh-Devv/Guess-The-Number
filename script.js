@@ -57,7 +57,7 @@ btnCheck.addEventListener('click', () => {
     // When guess is wrong
   } else if (guess !== secretNumber && guessed !== guess) {
     if (score > 1) {
-      if (guess < 0 || guess > 40) {
+      if (guess < 0 || guess > 50) {
         displayMessage('Input number between 1 - 30');
       } else if (guessGreater && guessDifference <= hint) {
         displayMessage('📈 High');
