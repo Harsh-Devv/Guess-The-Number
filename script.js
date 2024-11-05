@@ -1,13 +1,5 @@
 'use strict';
 
-//DONE Same number guessing does not lower the score.
-//DONE After winning the input and the check button disable
-//DONE More hint like High, low, too high, too low.
-//DONE When lost, the answer shows and screen is red.
-//DONE only in between numbers are approved.
-
-// --------------------------------------------------
-
 const number = document.querySelector('.number');
 const points = document.querySelector('.score');
 const message = document.querySelector('.message');
