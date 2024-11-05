@@ -12,14 +12,14 @@ let secretNumber;
 let score = 20;
 let highscore = 0;
 let guessed = 0; // to hold previous guess value
-let hint = 5
+let hint = 7
 
 function displayMessage(msg) {
   message.textContent = msg;
 }
 
 function randomNumber() {
-  secretNumber = Math.trunc(Math.random() * 30) + 1; 
+  secretNumber = Math.trunc(Math.random() * 50) + 1; 
 }
 
 function btnDisable() {
